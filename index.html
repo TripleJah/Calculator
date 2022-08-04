@@ -5,48 +5,58 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Calculator</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>CALCULATOR</h1>
 
     <div class="calculator">
-        <div class="display">
-            <p id="current"></p>
-        </div>
-        <div id="regButtons">
-            <button class="number-button" id="one">1</button>
-            <div class="number-button" id="two">2</div>
-            <div class="number-button" id="three">3</div>
-            <div class="number-button" id="four">4</div>
-            <div class="number-button" id="five">5</div>
-            <div class="number-button" id="six">6</div>
-            <div class="number-button" id="seven">7</div>
-            <div class="number-button" id="eight">8</div>
-            <div class="number-button" id="nine">9</div>
+        <div class="px-8 py-8">
+            <div class="flex mb-1 justify-end">
+                <div class="display">
+                    <p id="current">0</p>
+                </div>
+                <div class="button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-red-500 border-red-500" id="clear">CL</div>
+                <div class="button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="equals">=</div>
+            </div>
+            <div class="flex mb-1">
+                <div class="number-button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="seven">7</div>
+                <div class="number-button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="eight">8</div>
+                <div class="number-button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="nine">9</div>
+                <div class="button-operator flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-blue-500 border-blue-500" id="divide">/</div>
+            </div>
+            <div class="flex mb-1">
+                <div class="number-button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="four">4</div>
+                <div class="number-button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="five">5</div>
+                <div class="number-button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="six">6</div>
+                <div class="button-operator flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-blue-500 border-blue-500" id="multiply">*</div>
+            </div>
 
+            <div class="flex mb-1">
+                <div class="number-button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="one">1</div>
+                <div class="number-button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="two">2</div>
+                <div class="number-button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="three">3</div>
+                <div class="button-operator flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-blue-500 border-blue-500" id="minus">-</div>
+            </div>
 
-            <div class="button" id="clear">CL</div>
-            <div class="button" id="del">&#x2190;</div>
+            <div class="flex mb-1">
+                <div class="button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-yellow-500 border-yellow-500" id="point">.</div>
+                <div class="button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 border-green-500" id="zero">0</div>
+                <div class="button flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-red-500 border-red-500" id="del">&#x2190;</div>
+                <div class="button-operator flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-blue-500 border-blue-500" id="plus">+</div>
+            </div>
 
-            <div class="button-operator" id="plus">+</div>
-            <div class="button-operator" id="minus">-</div>
-            <div class="button-operator" id="multiply">*</div>
-            <div class="button-operator" id="divide">/</div>
-        </div>
-        <div id="big-buttons">
-            <div class="button" id="zero">0</div>
-            <div class="button" id="point">.</div>
-            <div class="button" id="equals">=</div>
+            
+
         </div>
 
     </div>
 
     <script src="main.js" async defer></script>
+    <script src="addStyles.js" async defer></script>
 </body>
 
 </html>
